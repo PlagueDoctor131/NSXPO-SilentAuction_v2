@@ -1,0 +1,211 @@
+.Logo {
+    width: 25%;
+    display: block;
+    margin: 0 auto;
+}
+
+nav {
+    text-align: center;
+    font-size: 1.75em;
+}
+
+nav a:visited,
+a:link {
+    color: rgb(232, 180, 0);
+}
+
+.header {
+    text-align: center;
+    color: rgb(232, 180, 0);
+}
+
+#auctionTimerBanner {
+    display: none;
+    background: #e0f7ff;
+    padding: 10px;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 1.1em;
+    border-radius: 6px;
+    max-width: 750px;
+}
+
+#auctionTimerBanner b {
+    font-size: 1.15em;
+}
+
+#auctionTimerCountdown {
+    display: inline-block;
+    margin-top: 4px;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.logoutbtn button {
+    font-size: .7em;
+    padding: 1%;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(232, 180, 0);
+}
+
+body {
+    font-family: sans-serif, Arial;
+    padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../resources/background_image_blur.png);
+}
+
+summary {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+summary .item-info {
+    min-height: 5em;
+}
+
+summary::after {
+    content: "▸";
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 0.2em;
+    transition: transform .2s ease;
+    transform-origin: center;
+}
+
+details[open]>summary::after {
+    transform: rotate(90deg);
+}
+
+#lookupOverlay span {
+    background-color: #fff;
+}
+
+#lookupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#lookupOverlay.hidden {
+    display: none;
+}
+
+form input {
+    width: calc(100% - 12px);
+    padding: 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+#items .item img {
+    width: 200%;
+    max-width: 100%;
+    height: 100%;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.carousel {
+    position: relative;
+    display: inline-block;
+}
+
+.carousel img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.carousel-btn.left {
+    left: 5px;
+}
+
+.carousel-btn.right {
+    right: 5px;
+}
+
+.admin-btn {
+    margin-top: 10px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.admin-btn:hover {
+    background: #c0392b;
+}
+
+#admin-login {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px #aaa;
+    max-width: 320px;
+}
+
+.phase-row {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fafafa;
+}
+
+.phase-row label {
+    display: inline-block;
+    margin: 6px 8px 6px 0;
+}
+
+.phase-row input[type="datetime-local"] {
+    min-width: 230px;
+}
+
+.phase-row .line {
+    margin: 6px 0;
+}
+
+.phase-row .removePhaseBtn {
+    margin-top: 6px;
+}

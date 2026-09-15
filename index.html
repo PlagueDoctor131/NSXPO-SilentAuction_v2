@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Silent Auction</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <img class="Logo" src="./resources/2026 Logo.png">
+  <hr>
+  <nav>
+    <a href="index.html">Silent Auction</a> |
+    <a href="gallery.html">Live Auction Preview</a>
+  </nav>
+  <div id="blacklistBanner" style="display:none; background:#f8d7da; color:#721c24; border:1px solid #f5c6cb;
+            border-radius:6px; padding:10px; margin:10px auto; max-width:750px; text-align:center;">
+    <span id="blacklistBannerText">Thank you for participating in the pre-event auction. Bidding is now closed for
+      non-attendees.</span>
+  </div>
+  <div id="auctionTimerBanner">
+    <div id="auctionPhaseLine">
+      <b id="auctionPhaseName"></b>
+      <span id="auctionPhaseFlags" style="margin-left:8px; opacity:.85;"></span>
+    </div>
+    <div id="auctionNextLine" style="margin-top:4px; opacity:.9;"></div>
+    <div id="auctionTimerCountdown"></div>
+  </div>
+  <div id="auctionReminderBanner" style="display:none;background:#fff3cd;color:#664d03;border:1px solid #ffecb5;
+            border-radius:6px;padding:10px;margin:10px auto;max-width:750px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+      <div id="auctionReminderText"></div>
+      <button id="dismissReminderBtn"
+        style="border:none;background:transparent;font-size:1.25em;cursor:pointer;">×</button>
+    </div>
+  </div>
+
+
+
+  <div class=logoutBtn>
+    <button id="logoutBtn">
+      Switch Bidder
+    </button>
+  </div>
+
+
+
+  <div id="countdownDisplay"
+    style="display:none; background:#ffeeba; padding:10px; margin-bottom:20px; text-align:center; font-size:1.2em; border-radius:6px;">
+  </div>
+
+  <!-- Overlay for looking up users -->
+  <div id="lookupOverlay" class="overlay">
+    <form id="lookupForm">
+      <h2><span>Enter Your Bid Number</span></h2>
+      <input type="text" id="bidInput" required />
+      <button type="submit">Continue</button>
+      <p id="lookupError" style="color:#f88"></p>
+    </form>
+  </div>
+
+  <div id="items"></div>
+
+  <div id="admin-login">
+    <h3>Admin Login</h3>
+    <input type="password" id="admin-password" placeholder="Enter password">
+    <button onclick="loginAdmin()">Login</button>
+    <p id="admin-status" style="color: green;"></p>
+  </div>
+  <div id="admin-panel"
+    style="display:none; margin-top:20px; background:#fff; padding:15px; border-radius:6px; box-shadow:0 0 5px #aaa;">
+    <h3>Admin Panel</h3>
+
+    <!-- Global Blacklist -->
+    <button id="toggleGlobalBL">Toggle Blacklist</button>
+    <p>Global Blacklist: <span id="globalBLStatus">Loading…</span></p>
+
+    <hr>
+
+    <!-- Member Blacklist -->
+    <h4>Manage Member Blacklist</h4>
+    <input type="text" id="memberBidInput" placeholder="Bid Number">
+    <button id="toggleMemberBL">Add/Remove from Blacklist</button>
+    <p id="memberBLStatus"></p>
+
+    <hr>
+    <h4>Auction Schedule</h4>
+    <div id="scheduleEditor"></div>
+    <div style="margin-top:8px;">
+      <button id="addPhaseBtn">Add Phase</button>
+      <button id="saveScheduleBtn">Save Schedule</button>
+      <button id="clearScheduleBtn" style="margin-left:6px;">Clear Schedule</button>
+    </div>
+    <p id="scheduleStatus"></p>
+
+
+    <hr>
+
+    <!-- Add Member -->
+    <h4>Add New Member</h4>
+    <input type="text" id="newBidNum" placeholder="Bid Number">
+    <input type="text" id="newFirstName" placeholder="First Name">
+    <input type="text" id="newLastName" placeholder="Last Name">
+    <input type="email" id="newEmail" placeholder="Email">
+    <input type="tel" id="newPhone" placeholder="Phone">
+    <button id="addMemberBtn">Add Member</button>
+    <p id="addMemberStatus"></p>
+
+    <hr>
+
+    <!-- Freeze All Auctions -->
+    <button id="toggleAllFreeze">Toggle Pause All Auctions</button>
+    <p>Auctions Status: <span id="allFreezeStatus">Loading…</span></p>
+
+    <!-- Exporting bidders to a csv -->
+    <hr>
+    <h4>Export Data</h4>
+    <button id="exportCSVBtn">Export Bidding History (CSV)</button>
+
+  </div>
+
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <script src="./scripts/scripts.js"></script>
+</body>
+
+</html>
