@@ -1,0 +1,22 @@
+[
+  {
+    "id": "live1",
+    "name": "Honda Motocompacto",
+    "desc": "Honda believes the future of clean transportation is already here and powerfully revolutionized with the Motocompacto. Earning a category all its own, Motocompacto is personal mobility designed like a dream. It fits perfectly into compact spaces, dynamic commutes, and individual styles. Designed, engineered and tested by Honda, Motocompacto delivers the company\u2019s signature durability, quality and reliability in personal electric transportation. Simple, elegant and approachable, Motocompacto is built for competitive performance. Get more info, and product specs, on <a href=\"https://motocompacto.honda.com/\" target=\"_blank\">Honda's Motocompacto</a> site! And if you don't end up winning, don't worry! You can still puchase one at <a href=\"https://www.acuraofpembrokepines.com/\" target=\"_blank\">Pembroke Pines Acura</a>!",
+    "images": [
+    "./resources/motocompacto_1.png",
+    "./resources/motocompacto_2.png",
+    "./resources/motocompacto_3.png"
+    ],
+    "donor": "Pembroke Pines Acura"
+  },
+  {
+    "id": "live2",
+    "name": "Set of Pirelli Tires",
+    "desc": "Winners will receive a $2,500 gift card toward purchases of any Pirelli tires.",
+    "images": [
+      "./resources/tires.png"
+    ],
+    "donor": "Pirelli"
+  }
+]
