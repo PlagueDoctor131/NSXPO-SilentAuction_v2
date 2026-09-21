@@ -26,9 +26,8 @@ jobs:
           SITE_VERSION: ${{ github.sha }}
         run: |
           mkdir _site
-          cp -R ./* _site/
+          rsync -a --exclude='_site' --exclude='.git' --exclude='.github' ./ _site/
           find _site -type f \( -name '*.html' -o -name '*.js' -o -name '*.json' \) -print0 | xargs -0 sed -i "s/__SITE_VERSION__/${SITE_VERSION}/g"
-          rm -rf _site/.git _site/.github _site/_site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
