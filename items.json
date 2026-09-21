@@ -136,5 +136,16 @@
       "./resources/ktuner.png",
       "./resources/ktuner_2.png"
     ]
+  },
+  {
+    "id": "item12",
+    "name": "Helix Auto Works s2k ABS conversion harness",
+    "dono": "Helix Auto",
+    "desc": "This harness allows you to use an AP1 S2000 ABS pump instead of the dated factory ABS pump that originally came with your NSX. With this high quality kit, you can expect improved braking performance and a more responsive pedal feel. It has been carefully crafted to meet the demands of performance enthusiasts as well as those who simply want to improve their braking performance. The winner will recieve either the <a href=\"https://www.helixautoworks.com/product/1991-to-1999-nsx-s2000-abs-conversion-harness-including-shipping-conus/\" target=\"_blank\">1990-1996 harness</a> or the <a href=\"https://www.helixautoworks.com/product/helix-auto-works-1997-to-1999-acura-nsx-plug-and-play-s2000-abs-conversion-harness-copy/\" target=\"_blank\">1997-1999 harness</a>, depending on their model! Please visit their relevant sites for more information.",
+    "startingBid": 0.0,
+    "retailValue": 525.0,
+    "images": [
+      "./resources/s2kharness.png"
+    ]
   }
 ]
