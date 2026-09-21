@@ -58,7 +58,23 @@ const bidInput = document.getElementById('bidInput');
 const lookupError = document.getElementById('lookupError');
 const lookupOverlay = document.getElementById('lookupOverlay');
 
-const Index_VERSION = "4";
+const Index_VERSION = "__SITE_VERSION__";
+
+function watchForDeploymentUpdates() {
+    setInterval(() => {
+        fetch("site-version.json?check=" + Date.now(), { cache: "no-store" })
+            .then(response => response.json())
+            .then(({ version }) => {
+                if (version && version !== Index_VERSION) {
+                    const url = `${window.location.pathname}?v=${encodeURIComponent(version)}${window.location.hash}`;
+                    window.location.replace(url);
+                }
+            })
+            .catch(() => { });
+    }, 60000);
+}
+
+watchForDeploymentUpdates();
 function setBidControlsHidden(hidden) {
     document.querySelectorAll("input[id$='-amount']").forEach(inp => {
         inp.disabled = hidden;

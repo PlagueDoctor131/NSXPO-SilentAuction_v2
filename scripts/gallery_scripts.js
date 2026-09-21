@@ -1,4 +1,20 @@
-const gallery_version = "2"
+const gallery_version = "__SITE_VERSION__"
+
+function watchForDeploymentUpdates() {
+    setInterval(() => {
+        fetch("site-version.json?check=" + Date.now(), { cache: "no-store" })
+            .then(response => response.json())
+            .then(({ version }) => {
+                if (version && version !== gallery_version) {
+                    const url = `${window.location.pathname}?v=${encodeURIComponent(version)}${window.location.hash}`;
+                    window.location.replace(url);
+                }
+            })
+            .catch(() => { });
+    }, 60000);
+}
+
+watchForDeploymentUpdates();
 let galleryItems = [];
 
 function createImageCarousel(images, itemId) {
