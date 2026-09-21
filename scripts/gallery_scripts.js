@@ -1,4 +1,4 @@
-const gallery_version = "1"
+const gallery_version = "2"
 let galleryItems = [];
 
 function createImageCarousel(images, itemId) {

@@ -16,7 +16,7 @@ nav a:link {
 
 .header {
     text-align: center;
-    color: rgb(232, 180, 0);
+    color: black;
 }
 
 #auctionTimerBanner {
@@ -146,6 +146,7 @@ form input {
     gap: 20px;
     justify-content: center;
     align-items: flex-start;
+    padding: 5px;
 }
 
 .page-title {
