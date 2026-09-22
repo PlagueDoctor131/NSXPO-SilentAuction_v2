@@ -825,7 +825,7 @@ function renderItems() {
                 if(item.startingBid > 0){
                     topEl.innerHTML = `<br><strong>Minimum Bid:</strong> $${item.startingBid}`;
                 } else{
-                    topEl.innerHTML = `<br><strong>No Minimum Bid</strong>`;
+                    topEl.innerHTML = `<br><strong>No Minimum Bid!</strong>`;
                 }
                 expandedTopEl.textContent = "No bids yet";
                 
