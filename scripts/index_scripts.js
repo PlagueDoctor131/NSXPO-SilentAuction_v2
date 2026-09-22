@@ -822,8 +822,13 @@ function renderItems() {
                 topEl.innerHTML = `<br><strong>Top Bidder:</strong> ${cur.firstName} ${cur.lastName}`;
                 expandedTopEl.textContent = `$${cur.amount} by ${cur.firstName} ${cur.lastName}`;
             } else {
-                topEl.innerHTML = `<br><strong>Minimum Bid:</strong> $${item.startingBid}`;
+                if(item.startingBid > 0){
+                    topEl.innerHTML = `<br><strong>Minimum Bid:</strong> $${item.startingBid}`;
+                } else{
+                    topEl.innerHTML = `<br><strong>No Minimum Bid</strong>`;
+                }
                 expandedTopEl.textContent = "No bids yet";
+                
             }
             document.getElementById(`${item.id}-total`).textContent = hist.length;
             document.getElementById(`${item.id}-history`).innerHTML =
