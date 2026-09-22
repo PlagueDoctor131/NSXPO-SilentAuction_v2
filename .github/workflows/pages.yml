@@ -21,6 +21,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Add commit version to local asset URLs
         env:
           SITE_VERSION: ${{ github.sha }}
@@ -28,6 +31,10 @@ jobs:
           mkdir _site
           rsync -a --exclude='_site' --exclude='.git' --exclude='.github' ./ _site/
           find _site -type f \( -name '*.html' -o -name '*.js' -o -name '*.json' \) -print0 | xargs -0 sed -i "s/__SITE_VERSION__/${SITE_VERSION}/g"
+          if grep -Rqs '__SITE_VERSION__' _site; then
+            echo 'The Pages artifact still contains an unsubstituted site version.'
+            exit 1
+          fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
