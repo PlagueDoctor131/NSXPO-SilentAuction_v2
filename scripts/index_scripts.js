@@ -822,11 +822,8 @@ function renderItems() {
                 topEl.innerHTML = `<br><strong>Top Bidder:</strong> ${cur.firstName} ${cur.lastName}`;
                 expandedTopEl.textContent = `$${cur.amount} by ${cur.firstName} ${cur.lastName}`;
             } else {
-                if(item.startingBid > 0){
-                    topEl.innerHTML = `<br><strong>Minimum Bid:</strong> $${item.startingBid}`;
-                } else{
-                    topEl.innerHTML = `<br><strong>No Minimum Bid!</strong>`;
-                }
+                topEl.innerHTML = `<br><strong>Minimum Bid:</strong> $${item.startingBid}`;
+                
                 expandedTopEl.textContent = "No bids yet";
                 
             }
