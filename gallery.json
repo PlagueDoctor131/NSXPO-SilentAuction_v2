@@ -18,5 +18,14 @@
       "./resources/tires.png"
     ],
     "donor": "Pirelli"
+  },
+  {
+    "id": "live3",
+    "name": "Inherited Freedom (24 x 36)",
+    "desc": "“One gate. Two paths. One passion for the journey.” — Khadija Zahid\nKhadija Zahid created this original painting for NSXPO. Her work often centers on horses and the bond between people, animals, and place. Here she sets the NSX and a saddled horse at the same open gate — two expressions of the same instinct to move, explore, and take the journey ahead.\nThe painting will be auctioned at the NSXPO banquet as a 50/50 charity sale, with proceeds split equally between BASE Camp Children's Cancer Foundation and the artist. Zahid spent more than 100 hours on the piece and will join us at the banquet.",
+    "images": [
+      "./resources/charity_painting.png"
+    ],
+    "donor": "Khadija Zahid"
   }
 ]
