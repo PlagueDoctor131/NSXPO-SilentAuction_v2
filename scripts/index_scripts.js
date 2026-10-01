@@ -724,6 +724,7 @@ function submitBid(e, itemId) {
         if (data.frozen) return alert("Bidding closed for this item.");
         if (!current && amt < startBid) return alert(`First bid must be at least $${startBid}.`);
         if (current && amt <= current.amount) return alert("Bid must exceed current highest bid.");
+        if (current && amt < current.amount+50) return alert("Bid must exceed current highest bid by at least $50.");
 
 
         const newBid = {
