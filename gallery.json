@@ -27,5 +27,16 @@
       "./resources/charity_painting.png"
     ],
     "donor": "Khadija Zahid"
+  },
+  {
+    "id": "live4",
+    "name": "Mattel NSX Brick Kit",
+    "desc": "Build car history with the 1:16 scale Acura NSX by Mattel Brick Shop. This detailed and authentic set includes extra parts for customization, a decal sheet, metal wheel covers, signature plate, plus an exclusive metal car to collect and display. See more details on the <a href=\"https://shop.mattel.com/products/mattel-brick-shop-hot-wheels-90-acura-nsx-jft17\" target=\"_blank\">Mattel Brick Shop</a> site!",
+    "images": [
+      "./resources/mattel1.png",
+      "./resources/mattel2.png",
+      "./resources/mattel3.png"
+    ],
+    "donor": "Mattel Brick Shop"
   }
 ]
