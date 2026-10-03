@@ -25,17 +25,6 @@
     ]
   },
   {
-    "id": "item13",
-    "name": "Set of Pirelli Tires [4 available]",
-    "dono": "Pirelli",
-    "desc": "Winners will receive a $2,500 gift card toward purchases of any Pirelli tires! There are 4 available, with the 3 runner-ups after the winner able to collect their certificate for the winning bid's amount.",
-    "startingBid": 600.0,
-    "retailValue": 2500.0,
-    "images": [
-      "./resources/tires.png"
-    ]
-  },
-  {
     "id": "item3",
     "name": "NSX 100% full Carbon Fiber Replacement Exterior Side Body Vent",
     "dono": "Euro Boutique",
